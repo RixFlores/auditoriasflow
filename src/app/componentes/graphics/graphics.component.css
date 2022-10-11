@@ -2,17 +2,6 @@
   padding-top: 30px;
 }
 
-.image{
-  width: 50%;
-  margin: 0px auto;
-  height: auto;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;  border-radius: 20px;
-}
-
-.image:hover{
-  cursor: pointer;
-}
-
 .imageModal{
   width: 100%;
 }
@@ -47,3 +36,18 @@
 }
 
 .modal { background: rgba(000, 000, 000, 0.8); min-height:1000000px; }
+
+.employeeCard{
+  float:left; 
+  width: 250px; 
+  margin: 10px;
+  height: 400px;
+}
+
+.employeeCard img{
+  height: 90%;
+  width: 90%;
+  margin: 0px auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}

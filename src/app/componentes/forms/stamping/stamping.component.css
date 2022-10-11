@@ -6,7 +6,7 @@
 }
 
 .titleBBS{
-  font-size: 25px;
+  font-size: 18px;
   margin-top: 1rem;
   margin-left: 2rem;
 }
@@ -78,4 +78,23 @@
   max-width: 285px;
   height: auto;
   border-radius: 5px;
+}
+
+.image{
+  width: 20%;
+  margin: 0px auto;
+  border-radius: 500px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 6px 12px;
+  cursor: pointer;
 }

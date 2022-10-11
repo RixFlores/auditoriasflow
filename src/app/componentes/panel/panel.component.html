@@ -1,40 +1,66 @@
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" [opened]="true" mode="side">
-    <div class="row mb-5">
-      <div class="col">
-        <img src="../../../assets/img/Flowserve-Logo.jpg" alt="Flowserve logo" class="logo">
-      </div>
-    </div><!--
+    <div class="mat-drawer-inner-container">  
     <div class="row">
-      <div class="col mb-4 mt-2 textLogo">
-        <h4>TLAXCALA</h4>
+      <div class="col mb-4 textLogo" style="max-width: 250px;">
+        <img [src]="avatar" class="image"><br>
+        <h4>Bienvenido</h4>
+        <h4>{{usuario.firstName}}</h4>
+        <h6>{{usuario.user.email}}</h6>
       </div>
-    </div> -->
-    <div class="row mt-5">
-      <div class="col" align="left">
-        <button (click)="seleccionMenu('agenda')" class="btn menuOption">
-          EVENTOS
-        </button>
+    </div> 
+      <div class="row">
+        <div class="col" align="left">
+          <button (click)="seleccionMenu('agenda')" class="btn menuOption">
+            <p style="margin-bottom: 0px;">
+              <svg style="margin-right: 4px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2-week" viewBox="0 0 16 16">
+                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
+                <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+              </svg>
+              EVENTOS</p>
+          </button>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col" align="left">
-        <button (click)="seleccionMenu('graficos')" class="btn menuOption">
-          RESULTADOS
-        </button>
+      <div class="row">
+        <div class="col" align="left">
+          <button (click)="seleccionMenu('empleados')" class="btn menuOption">
+            <p style="margin-bottom: 0px">
+              <svg style="margin-right: 4px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-video2" viewBox="0 0 16 16">
+                <path d="M10 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                <path d="M2 1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2ZM1 3a1 1 0 0 1 1-1h2v2H1V3Zm4 10V2h9a1 1 0 0 1 1 1v9c0 .285-.12.543-.31.725C14.15 11.494 12.822 10 10 10c-3.037 0-4.345 1.73-4.798 3H5Zm-4-2h3v2H2a1 1 0 0 1-1-1v-1Zm3-1H1V8h3v2Zm0-3H1V5h3v2Z"/>
+              </svg>
+              COLABORADORES
+            </p>
+          </button>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col" align="left">
-        <button (click)="seleccionMenu('empleados')" class="btn menuOption">
-          COLABORADORES
-        </button>
+      <div class="row">
+        <div class="col" align="left">
+          <button (click)="seleccionMenu('graficos')" class="btn menuOption">
+            <p style="margin-bottom: 0px;">
+              <svg style="margin-right: 4px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+                <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+              </svg>
+              RESULTADOS</p>
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" align="left">
+          <button (click)="seleccionMenu('configuracion')" class="btn menuOption">
+            <p style="margin-bottom: 0px;"><svg style="margin-right: 4px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg>  CUENTA</p>
+          </button>
+        </div>
       </div>
     </div>
   </mat-drawer>
 
   <div class="example-sidenav-content">
-    <ul class="nav justify-content-end" style="background-color: rgb(226, 35, 26); width: 100%; height: 45px;">
+    <ul class="nav justify-content-end" style="background-color: rgb(226, 35, 26); width: 100%; height: 45px; box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;">
       <li class="nav-item">
         <button type="button" mat-button (click)="drawer.toggle()" class="toggleButton">
           <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="white" class="bi bi-list" viewBox="0 0 16 16">
@@ -43,15 +69,8 @@
         </button>
       </li>
       <li class="nav-item">
-        <a class="nav-link" style="color: white;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-          </svg>
-        </a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" style="color: white;" (click)="logOut()">
+          Cerrar sesión
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
             <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
@@ -69,6 +88,9 @@
     </div>
     <div *ngIf="opcionMenu == 'empleados'">
       <empleados></empleados>
+    </div>
+    <div *ngIf="opcionMenu == 'configuracion'">
+      <settings></settings>
     </div>
   </div>
 

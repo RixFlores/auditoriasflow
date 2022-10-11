@@ -1,9 +1,11 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 
 import { PanelComponent } from './componentes/panel/panel.component';
 
@@ -78,6 +80,7 @@ import { JwtInterceptorInterceptor } from './componentes/auth/jwt-interceptor.in
 import { CookieService } from 'ngx-cookie-service';
 import { SpinnerComponent } from './componentes/spinner/spinner.component';
 import { LoginComponent } from './componentes/auth/login/login.component';
+import { SettingsComponent } from './componentes/ajustes/settings.component';
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
   dayGridPlugin,
@@ -108,6 +111,7 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
     AuthComponent,
     SpinnerComponent,
     LoginComponent,
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,
@@ -152,8 +156,10 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
     FormsModule,
     HttpClientModule,
     FullCalendarModule,
-    NgxQRCodeModule
-
+    NgxQRCodeModule,
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [
     CookieService,
@@ -162,6 +168,10 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
       useClass: JwtInterceptorInterceptor,
       multi: true
     },
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy
+    }
   ],
   bootstrap: [AppComponent]
 })

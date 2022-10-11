@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
   hide = true;
   public cookieUser : string = '';
   public userJson : any = '';
+  public spinnerShow: boolean = false;
 
   constructor(
     private readonly authService: AuthService,
@@ -64,6 +65,7 @@ export class LoginComponent implements OnInit {
 
   login(){
     this.spinnerService.show();
+    this.spinnerShow = true;
     if(this.studentDetailsForm?.form.valid){
       this.authService.login(this.credential)
       .subscribe(

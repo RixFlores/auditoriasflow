@@ -31,9 +31,9 @@
 
 .optionButton:hover{
   cursor: pointer;
-  background-color: white;
-  color: red;
-  border: 1px solid red;
+  background-color: #1A237E;
+  color: white;
+  border: 1px solid white;
 }
 
 .active{
@@ -42,15 +42,8 @@
   border: 1px solid white;
 }
 
-.nav-pills .nav-link.active {
-  background-color: red;
-  color: white;
-}
-
-.modal { background: rgba(000, 000, 000, 0.8); min-height:1000000px; }
-
 .image{
-  width: 30%;
+  width: 20%;
   margin: 0px auto;
   border-radius: 500px;
 }

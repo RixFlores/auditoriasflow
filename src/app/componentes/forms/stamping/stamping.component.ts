@@ -36,7 +36,7 @@ export class StampingComponent implements OnInit {
       comentarios: ''
     },
     {
-      pregunta: 'Al utiliza la prensa el operador utiliza ambas manos para activar los controles (validar si intenta tomar atajo)',
+      pregunta: 'Al utilizar la prensa el operador utiliza ambas manos para activar los controles (validar si intenta tomar atajo)',
       respuesta: undefined,
       comentarios: ''
     },
@@ -46,7 +46,7 @@ export class StampingComponent implements OnInit {
       comentarios: ''
     },
     {
-      pregunta: 'Describa algun comportamiento de riesgo que haya observado',
+      pregunta: '(OPCIONAL) Describa algun comportamiento de riesgo que haya observado',
       respuesta: undefined,
       comentarios: ''
     }
@@ -78,7 +78,7 @@ export class StampingComponent implements OnInit {
       comentarios: ''
     },
     {
-      pregunta: 'Describa algun comportamiento de riesgo que haya observado',
+      pregunta: '(OPCIONAL) Describa algun comportamiento de riesgo que haya observado',
       respuesta: undefined,
       comentarios: ''
     }
@@ -115,7 +115,7 @@ export class StampingComponent implements OnInit {
       comentarios: ''
     },
     {
-      pregunta: 'Describa algun comportamiento de riesgo que haya observado',
+      pregunta: '(OPCIONAL) Describa algun comportamiento de riesgo que haya observado',
       respuesta: undefined,
       comentarios: ''
     }
@@ -147,7 +147,7 @@ export class StampingComponent implements OnInit {
       comentarios: ''
     },
     {
-      pregunta: 'Describa algun comportamiento de riesgo que haya observado',
+      pregunta: '(OPCIONAL) Describa algun comportamiento de riesgo que haya observado',
       respuesta: undefined,
       comentarios: ''
     }
@@ -184,7 +184,7 @@ export class StampingComponent implements OnInit {
       comentarios: ''
     },
     {
-      pregunta: 'Describa algun comportamiento de riesgo que haya observado',
+      pregunta: '(OPCIONAL) Describa algun comportamiento de riesgo que haya observado',
       respuesta: undefined,
       comentarios: ''
     }
@@ -216,7 +216,7 @@ export class StampingComponent implements OnInit {
       comentarios: ''
     },
     {
-      pregunta: 'Describa algun comportamiento de riesgo que haya observado',
+      pregunta: '(OPCIONAL) Describa algun comportamiento de riesgo que haya observado',
       respuesta: undefined,
       comentarios: ''
     }
@@ -248,7 +248,7 @@ export class StampingComponent implements OnInit {
       comentarios: ''
     },
     {
-      pregunta: 'Describa algun comportamiento de riesgo que haya observado',
+      pregunta: '(OPCIONAL) Describa algun comportamiento de riesgo que haya observado',
       respuesta: undefined,
       comentarios: ''
     }
@@ -285,7 +285,7 @@ export class StampingComponent implements OnInit {
       comentarios: ''
     },
     {
-      pregunta: 'Describa algun comportamiento de riesgo que haya observado',
+      pregunta: '(OPCIONAL) Describa algun comportamiento de riesgo que haya observado',
       respuesta: undefined,
       comentarios: ''
     }
@@ -317,7 +317,7 @@ export class StampingComponent implements OnInit {
       comentarios: ''
     },
     {
-      pregunta: 'Describa algun comportamiento de riesgo que haya observado',
+      pregunta: '(OPCIONAL) Describa algun comportamiento de riesgo que haya observado',
       respuesta: undefined,
       comentarios: ''
     }
@@ -344,7 +344,7 @@ export class StampingComponent implements OnInit {
       comentarios: ''
     },
     {
-      pregunta: 'Describa algun comportamiento de riesgo que haya observado',
+      pregunta: '(OPCIONAL) Describa algun comportamiento de riesgo que haya observado',
       respuesta: undefined,
       comentarios: ''
     }
@@ -391,7 +391,7 @@ export class StampingComponent implements OnInit {
       comentarios: ''
     },
     {
-      pregunta: 'Describa algun comportamiento de riesgo que haya observado',
+      pregunta: '(OPCIONAL) Describa algun comportamiento de riesgo que haya observado',
       respuesta: undefined,
       comentarios: ''
     }
@@ -428,7 +428,7 @@ export class StampingComponent implements OnInit {
       comentarios: ''
     },
     {
-      pregunta: 'Describa algun comportamiento de riesgo que haya observado',
+      pregunta: '(OPCIONAL) Describa algun comportamiento de riesgo que haya observado',
       respuesta: undefined,
       comentarios: ''
     }
@@ -465,19 +465,18 @@ export class StampingComponent implements OnInit {
       comentarios: ''
     },
     {
-      pregunta: 'Describa algun comportamiento de riesgo que haya observado',
+      pregunta: '(OPCIONAL) Describa algun comportamiento de riesgo que haya observado',
       respuesta: undefined,
       comentarios: ''
     }
   ]
-
 
   /* SECCION DE PREGUNTAS FIN */
 
   public respuestas: answer = {
     eventId: '',
     assignedTo: '',
-    image: '',
+    image: 'No image',
     questions: [{
       description: '',
       selection: false,
@@ -546,7 +545,7 @@ export class StampingComponent implements OnInit {
           this.eventId = tokenDecoded["EventId"]
         }
 
-        this.employeeService.getEmployee(tokenDecoded["EmployeeId"])
+        this.employeeService.getEmployeeLogged()
         .subscribe(
           (success)=>{
             console.log(success)
@@ -555,7 +554,6 @@ export class StampingComponent implements OnInit {
             console.log(error)
           }
         )
-
 
         if(this.formCode == 'STP62'){
           this.preguntas = this.preguntasStamping;
@@ -607,30 +605,32 @@ export class StampingComponent implements OnInit {
     )
   }
 
-  functionReady(){
+  /* functionReady(){
     this.preguntas[this.preguntas.length-1].respuesta = true;
     this.respuestas.image = 'No image';
-
     var answered = 0;
-    for (let i = 0; i < this.preguntas.length-1; i++) {
+
+
+
+    for (let i = 0; i < this.preguntas.length; i++) {
       if(this.preguntas[i].respuesta == undefined || this.respuestas.image == ''){
         answered ++;
       }if(answered == 0){
         this.formReady = true;
       }
     }
-
-  }
+  } */
 
   functionYes(index:any){
     this.preguntas[index].respuesta = true;
     var answered = 0;
     for (let i = 0; i < this.preguntas.length-1; i++) {
-      if(this.preguntas[i].respuesta == undefined || this.respuestas.image == ''){
+      if(this.preguntas[i].respuesta == undefined){
         answered ++;
-      }if(answered == 0){
-        this.formReady = true;
       }
+    }
+    if(answered == 0){
+      this.formReady = true;
     }
   }
 
@@ -638,11 +638,12 @@ export class StampingComponent implements OnInit {
     this.preguntas[index].respuesta = false;
     var answered = 0;
     for (let i = 0; i < this.preguntas.length-1; i++) {
-      if(this.preguntas[i].respuesta == undefined || this.respuestas.image == ''){
+      if(this.preguntas[i].respuesta == undefined){
         answered ++;
-      }if(answered == 0){
-        this.formReady = true;
       }
+    }
+    if(answered == 0){
+      this.formReady = true;
     }
   }
 
@@ -657,11 +658,12 @@ export class StampingComponent implements OnInit {
       this.preguntas[this.preguntas.length-1].respuesta = true;
       var answered = 0;
       for (let i = 0; i < this.preguntas.length-1; i++) {
-        if(this.preguntas[i].respuesta == undefined || this.respuestas.image == ''){
+        if(this.preguntas[i].respuesta == undefined){
           answered ++;
-        }if(answered == 0){
-          this.formReady = true;
         }
+      }
+      if(answered == 0){
+        this.formReady = true;
       }
     })
     this.archivos.push(archivoCapturado);
@@ -691,7 +693,6 @@ export class StampingComponent implements OnInit {
 
   enviar(){
     this.spinnerService.show();
-    debugger
     for(let i = 0; i<this.preguntas.length; i++){
       this.answersArray.push(
         {

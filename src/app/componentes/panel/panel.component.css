@@ -12,6 +12,7 @@
 .example-sidenav {
   padding: 20px;
   background-color: #E2231A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .logo{
@@ -19,6 +20,12 @@
   padding: 10px;
   background-color: white;
   border-radius: 20px;
+}
+
+.image{
+  width: 80%;
+  margin: 0px auto;
+  border-radius: 500px;
 }
 
 .textLogo{
@@ -57,4 +64,8 @@
 .nav-link:hover{
   cursor: pointer;
   background-color: #94140e;
+}
+
+.mat-drawer-inner-container{
+  overflow-x:hidden !important
 }

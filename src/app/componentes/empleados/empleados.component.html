@@ -1,10 +1,35 @@
-<div class="contenedor" style="padding-bottom:4rem; padding-top: 4rem;">
-  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="border-bottom: 2px solid #0d6efd; width: 100%;">
-    <li class="nav-item" role="presentation"><button class="nav-link active optionButton" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" (click)="menuOption = 'uno'">Creación de empleados</button></li>
-    <li class="nav-item" role="presentation"><button class="nav-link optionButton" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" (click)="menuOption = 'dos'">Listado de empleados</button></li>
+<div class="contenedor" style="padding-bottom:4rem; padding-top: 2rem;">
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="border-bottom: 2px solid red; width: 100%; padding: 5px;">
+    <li class="nav-item" role="presentation"><button class="nav-link optionButton active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" (click)="menuOption = 'dos'">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
+        <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+        <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+      </svg>
+      Empleados</button></li>
+
+
+      <li class="nav-item" role="presentation"><button class="nav-link optionButton" id="pills-adminList-tab" data-bs-toggle="pill" data-bs-target="#pills-adminList" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" (click)="menuOption = 'dos'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
+          <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+          <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+        </svg>
+        Administradores</button></li>
+
+    <li class="nav-item" role="presentation"><button class="nav-link optionButton" id="pills-admins-tab" data-bs-toggle="pill" data-bs-target="#pills-admins" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" (click)="menuOption = 'dos'">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+      </svg>
+      Administradores</button></li>
+      <li class="nav-item" role="presentation"><button class="nav-link optionButton" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" (click)="menuOption = 'uno'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+        </svg>
+        Empleados</button></li>
   </ul>
   <div class="tab-content" id="pills-tabContent">
-    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0" style="background-color: transparent; color:black">
+    <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0" style="background-color: transparent; color:black">
       <div class="card text-center mt-2">
         <div class="card-header">
           <p class="title">Creación de usuarios</p>
@@ -28,7 +53,7 @@
             <!-- Matrícula -->
             <p>
               <mat-form-field appearance="outline" style="width: 100%">
-                <mat-label>Matrícula</mat-label>
+                <mat-label>GEMS</mat-label>
                 <input type="text" matInput [(ngModel)]="empleado.officialId" name="id" (keyup)="checkForm()" required>
               </mat-form-field>
             </p>
@@ -51,7 +76,7 @@
         </div>
       </div>
     </div>
-    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0" style="background-color: transparent; color:black">
+    <div class="tab-pane fade  show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0" style="background-color: transparent; color:black">
       <div class="card mt-2">
         <div class="card-header">
           <p class="title">Busqueda de usuarios</p>
@@ -70,15 +95,21 @@
                 <td mat-cell *matCellDef="let row"> {{row.firstName}} {{row.lastName}}</td>
               </ng-container>
               <ng-container matColumnDef="matricula">
-                <th mat-header-cell *matHeaderCellDef> Matrícula </th>
+                <th mat-header-cell *matHeaderCellDef> GEMS </th>
                 <td mat-cell *matCellDef="let row"> {{row.officialId}} </td>
               </ng-container>
               <ng-container matColumnDef="opciones">
-                <th mat-header-cell *matHeaderCellDef> Editar </th>
-                <td mat-cell *matCellDef="let row">
-                  <button mat-button data-toggle="modal" data-target="#example" style="margin-left:20px">
+                <th mat-header-cell *matHeaderCellDef  style="text-align:center;"> Editar </th>
+                <td mat-cell *matCellDef="let row"  style="text-align:center;">
+                  <button mat-button  data-toggle="modal" data-target="#editEmployee" style="margin-left:20px; height: 100%;" (click)="employeeToUpdate(row.id)">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
                       <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                    </svg>
+                  </button>
+                  <button mat-button  data-toggle="modal" data-target="#deleteEmployee" style="margin-left:20px; height: 100%;" (click)="employeeToDelete(row.id)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                      <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                      <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
                     </svg>
                   </button>
                 </td>
@@ -89,11 +120,246 @@
                 <td class="mat-cell" colspan="4">Escribe algo en la barra de busqueda</td>
               </tr>
             </table>
-            <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+            <mat-paginator 
+            #paginatorEmployee
+            [length]="100"
+            [pageSize]="5"
+            [pageSizeOptions]="[5, 10, 25, 100]"
+            aria-label="Select page">
+          </mat-paginator>
           </div>
         </div>
       </div>
     </div>
+    <div class="tab-pane fade" id="pills-admins" role="tabpanel" aria-labelledby="pills-admins-tab" tabindex="0" style="background-color: transparent; color:black">
+      <div class="card text-center mt-2">
+        <div class="card-header">
+          <p class="title">Creación de usuarios</p>
+        </div>
+        <div class="card-body" align="left">
+          <form #adminForm="ngForm" class="formulario">
+            <div class="row">
+              <div class="col">
+                <!-- Nombre -->
+                <p>
+                  <mat-form-field appearance="outline" style="width: 100%">
+                    <mat-label>Nombre</mat-label>
+                    <input type="text" matInput [(ngModel)]="admin.firstName" name="name" (keyup)="checkAdminForm()" required>
+                  </mat-form-field>
+                </p>
+              </div>
+              <div class="col">
+                <!-- Apellidos -->
+                <p>
+                  <mat-form-field appearance="outline" style="width: 100%">
+                    <mat-label>Apellidos</mat-label>
+                    <input type="text" matInput [(ngModel)]="admin.lastName" name="lastname" (keyup)="checkAdminForm()" required>
+                  </mat-form-field>
+                </p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <!-- Apellidos -->
+                <p>
+                  <mat-form-field appearance="outline" style="width: 100%">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput [(ngModel)]="admin.email" name="email" (keyup)="checkAdminForm()" required>
+                  </mat-form-field>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <mat-form-field appearance="outline" style="width: 100%">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="admin.password" (keyup)="checkAdminForm()" name="password" required>
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                  </mat-form-field>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <mat-form-field appearance="outline" style="width: 100%">
+                    <mat-label>Teléfono</mat-label>
+                    <input type="tel" matInput  [(ngModel)]="admin.phoneNumber" (keyup)="checkAdminForm()" name="tel" placeholder="111-222-3333" required>
+                  </mat-form-field>
+                </p>
+              </div>
+            </div>
+          </form>
+          <div class="alert alert-danger" *ngIf="!formReady" role="alert" style="text-align:center">
+            Todos los campos son necesarios
+          </div>
+        </div>
+        <div class="card-footer text-muted">
+          <div *ngIf="formReady">
+            <button class="btn btn-success" (click)="addAdmin()">
+              Crear
+            </button>
+          </div>
+          <div *ngIf="!formReady">
+            <button class="btn btn-dark">
+              Crear
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="pills-adminList" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0" style="background-color: transparent; color:black">
+      <div class="card mt-2">
+        <div class="card-header">
+          <p class="title">Busqueda de administradores</p>
+        </div>
+        <div class="card-body">
+          <div class="example-container mat-elevation-z8">
+            <div class="example-header">
+              <mat-form-field appearance="standard">
+                <mat-label style="padding:10px">Buscar</mat-label>
+                <input matInput (keyup)="applyFilter($event)" placeholder="Rutina"#input>
+              </mat-form-field>
+            </div>
+            <table mat-table [dataSource]="dataSourceAdmin" matSort style="width:100%">
+              <ng-container matColumnDef="nombre">
+                <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                <td mat-cell *matCellDef="let row"> {{row.firstName}} {{row.lastName}}</td>
+              </ng-container>
+              <ng-container matColumnDef="matricula">
+                <th mat-header-cell *matHeaderCellDef> Email </th>
+                <td mat-cell *matCellDef="let row"> {{row.officialId}} </td>
+              </ng-container>
+              <ng-container matColumnDef="opciones">
+                <th mat-header-cell *matHeaderCellDef  style="text-align:center;"> Editar </th>
+                <td mat-cell *matCellDef="let row"  style="text-align:center;">
+                  <button mat-button  data-toggle="modal" data-target="#deleteAdmin" style="margin-left:20px; height: 100%;" (click)="adminToDelete(row.id)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                      <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                      <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                    </svg>
+                  </button>
+                </td>
+              </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedColumnsAdmin"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumnsAdmin;"></tr>
+
+              <!-- Row shown when there is no matching data. -->
+              <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+              </tr>
+            </table>
+            <mat-paginator 
+              #paginatorAdmin
+              [length]="100"
+              [pageSize]="5"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+            </mat-paginator>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<!-- Edit Modal -->
+<div class="modal fade" id="editEmployee" tabindex="-1" data-backdrop="false" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar empleado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form #employeeForm="ngForm" class="formulario">
+          <!-- Nombre -->
+          <p>
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Nombre</mat-label>
+              <input type="text" matInput [(ngModel)]="updateEmpleado.firstName" name="name">
+            </mat-form-field>
+          </p>
+          <!-- Apellidos -->
+          <p>
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Apellidos</mat-label>
+              <input type="text" matInput [(ngModel)]="updateEmpleado.lastName" name="lastname">
+            </mat-form-field>
+          </p>
+          <!-- Matrícula -->
+          <p>
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>GEMS</mat-label>
+              <input type="text" matInput [(ngModel)]="updateEmpleado.officialId" name="id">
+            </mat-form-field>
+          </p>
+          <img [src]="previsualizacion" class="image"><br>        
+          <label for="file-upload" class="custom-file-upload">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-image" viewBox="0 0 16 16">
+              <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+              <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z"/>
+            </svg> Cambiar imagen       
+          </label>
+          <input id="file-upload" type="file" (change)="captureFile($event)">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-success"  data-dismiss="modal" (click)="updateEmployee()">Actualizar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteEmployee" tabindex="-1" data-backdrop="false" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Eliminar empleado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Seguro que deseas eliminar al colaborador?</p>
+      </div>    
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-danger"  data-dismiss="modal" (click)="deleteEmployee()">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteAdmin" tabindex="-1" data-backdrop="false" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Eliminar empleado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Seguro que deseas eliminar al Administrador?</p>
+      </div>    
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-danger"  data-dismiss="modal" (click)="deleteAdmin()">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 

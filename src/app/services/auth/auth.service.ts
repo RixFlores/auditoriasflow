@@ -37,4 +37,26 @@ export class AuthService {
     return this.httpClient.post<any>(this.baseApiUrl+'/api/authentication/login-employee',body);
   }
 
+  updateName(request:any):Observable<any>{
+    const body:any = {
+      firstName: request.firstName,
+      lastName: request.lastName,
+    }
+    return this.httpClient.put<any>(this.baseApiUrl + '/api/administrators/logged',body);
+  }
+
+  updatePassword(request:any):Observable<any>{
+    const body:any = {
+      newPassword: request.password,
+      confirmNewPassword: request.confirmedPassword,
+      currentPassword: request.currentPassword,
+    }
+    return this.httpClient.put<any>(this.baseApiUrl + '/api/authentication/change-password',body);
+  }
+
+  getUserData(): Observable<any>{
+    return this.httpClient.get<any>(this.baseApiUrl + '/api/administrators/logged');
+  }
+
+
 }

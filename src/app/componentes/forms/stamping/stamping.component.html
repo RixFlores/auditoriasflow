@@ -69,18 +69,35 @@
                   <button (click)="functionNo(i)" *ngIf="question.respuesta != false" class="btn btn-dark">No</button>
                 </div>
               </div>
+
+
+
               <div class="row" *ngIf="selectedQuestion == preguntas.length-1">
                 <div class="col" align="center">
                   <!--<input type="file" accept="image/*" (change)="captureFile($event)" [(ngModel)]="question.respuesta" capture="environment"> -->
 <!--                   <input type="file" (change)="captureFile($event)" [(ngModel)]="question.respuesta">-->
                   <input type="file" accept="image/*" (change)="captureFile($event)" [(ngModel)]="question.respuesta" capture="environment">
-                </div>
-              </div>
-              <div class="row" *ngIf="previsualizacion && selectedQuestion == preguntas.length-1">
-                <div class="col">
+                  <label for="file-upload" class="custom-file-upload">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-image" viewBox="0 0 16 16">
+                      <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                      <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z"/>
+                    </svg> Subir imagen       
+                  </label><br>
+                  <input id="file-upload" type="file" (change)="captureFile($event)">
                   <img [src]="previsualizacion" class="fotografia">
                 </div>
               </div>
+
+
+
+
+              <!-- <div class="row" *ngIf="previsualizacion && selectedQuestion == preguntas.length-1">
+                <div class="col">
+                  <img [src]="previsualizacion" class="fotografia">
+                </div>
+              </div> -->
+
+
               <div class="row mt-2">
                 <div class="col-10" style="margin: 0px auto;">
                   <p class="pregunta">Comentarios</p>
@@ -88,7 +105,8 @@
                   style="box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;"></textarea>
                 </div>
               </div>
-              <div class="row mt-4" *ngIf="selectedQuestion == preguntas.length-1">
+
+              <!-- <div class="row mt-4" *ngIf="selectedQuestion == preguntas.length-1">
                 <div class="col" align="center">
                   <button *ngIf="selectedQuestion == preguntas.length-1 && respuestas.image == '' " (click)="functionReady()" class="btn btn-dark">
                     Sin comentarios
@@ -100,6 +118,9 @@
                   </div>
                 </div>
               </div>
+ -->
+
+
             </div>
           </div>
         </h5>

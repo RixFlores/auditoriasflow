@@ -31,9 +31,9 @@
 
 .optionButton:hover{
   cursor: pointer;
-  background-color: #1A237E;
-  color: white;
-  border: 1px solid white;
+  background-color: white;
+  color: red;
+  border: 1px solid red;
 }
 
 .active{
@@ -42,3 +42,24 @@
   border: 1px solid white;
 }
 
+.filterUser{
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  width: 90%;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.addButton:hover{
+  cursor: pointer;
+  background-color: #E2231A;
+  color: white;
+  border: 1px solid #E2231A;
+}
+
+.nav-pills .nav-link.active {
+  background-color: red;
+  color: white;
+}
+
+.modal { background: rgba(000, 000, 000, 0.8); min-height:1000000px; }
